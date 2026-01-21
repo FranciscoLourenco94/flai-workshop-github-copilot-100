@@ -95,19 +95,13 @@ section h3 {
 }
 
 .activity-card .participants li {
-  padding: 6px 0 6px 20px;
+  padding: 6px 0;
   position: relative;
   color: #555;
   font-size: 14px;
-}
-
-.activity-card .participants li:before {
-  content: "•";
-  position: absolute;
-  left: 5px;
-  color: #1a237e;
-  font-weight: bold;
-  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .activity-card .participants .no-participants {
@@ -116,8 +110,20 @@ section h3 {
   padding-left: 0;
 }
 
-.activity-card .participants .no-participants:before {
-  content: none;
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px 8px;
+  transition: transform 0.2s, opacity 0.2s;
+  opacity: 0.6;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  background-color: transparent;
 }
 
 .form-group {
