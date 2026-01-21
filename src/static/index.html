@@ -4,13 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mergington High School Activities</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <div class="header-content">
+        <div class="header-icon">🏫</div>
+        <div class="header-text">
+          <h1>Mergington High School</h1>
+          <h2>Extracurricular Activities</h2>
+        </div>
+      </div>
     </header>
+
+    <section class="stats-section">
+      <div class="stat-card">
+        <div class="stat-icon">🎯</div>
+        <div class="stat-number" id="total-activities">9</div>
+        <div class="stat-label">Activities</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">👥</div>
+        <div class="stat-number" id="total-students">0</div>
+        <div class="stat-label">Enrolled Students</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">💺</div>
+        <div class="stat-number" id="available-spots">0</div>
+        <div class="stat-label">Available Spots</div>
+      </div>
+    </section>
 
     <main>
       <section id="activities-container">
@@ -22,27 +48,83 @@
       </section>
 
       <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
+        <h3>✨ Sign Up for an Activity</h3>
+        <p class="section-description">Join your favorite activity and start your journey!</p>
         <form id="signup-form">
           <div class="form-group">
-            <label for="email">Student Email:</label>
+            <label for="email">📧 Student Email:</label>
             <input type="email" id="email" required placeholder="your-email@mergington.edu" />
           </div>
           <div class="form-group">
-            <label for="activity">Select Activity:</label>
+            <label for="activity">🎨 Select Activity:</label>
             <select id="activity" required>
               <option value="">-- Select an activity --</option>
               <!-- Activity options will be loaded here -->
             </select>
           </div>
-          <button type="submit">Sign Up</button>
+          <button type="submit" class="btn-primary">🚀 Sign Up Now</button>
         </form>
         <div id="message" class="hidden"></div>
+      </section>
+
+      <section id="donation-container">
+        <h3>💝 Support Our School</h3>
+        <p class="section-description">Your donations help us provide better facilities and opportunities for our students!</p>
+        
+        <div class="donation-amounts">
+          <button class="amount-btn" data-amount="10">$10</button>
+          <button class="amount-btn" data-amount="25">$25</button>
+          <button class="amount-btn" data-amount="50">$50</button>
+          <button class="amount-btn" data-amount="100">$100</button>
+          <button class="amount-btn" data-amount="custom">Custom</button>
+        </div>
+
+        <form id="donation-form">
+          <div class="form-group">
+            <label for="donation-amount">💰 Donation Amount:</label>
+            <input type="number" id="donation-amount" min="1" step="0.01" required placeholder="Enter amount" />
+          </div>
+          <div class="form-group">
+            <label for="donor-name">👤 Your Name:</label>
+            <input type="text" id="donor-name" required placeholder="John Doe" />
+          </div>
+          <div class="form-group">
+            <label for="donor-email">📧 Your Email:</label>
+            <input type="email" id="donor-email" required placeholder="your-email@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="donation-message">💬 Message (Optional):</label>
+            <textarea id="donation-message" rows="3" placeholder="Leave a message of support..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary">💳 Donate Now</button>
+        </form>
+        <div id="donation-message" class="hidden"></div>
+        
+        <div class="donation-stats">
+          <div class="donation-stat">
+            <span class="stat-value" id="total-donations">$0</span>
+            <span class="stat-text">Total Raised</span>
+          </div>
+          <div class="donation-stat">
+            <span class="stat-value" id="donor-count">0</span>
+            <span class="stat-text">Generous Donors</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="calendar-container">
+        <h3>📅 Weekly Schedule</h3>
+        <div id="calendar">
+          <!-- Calendar will be loaded here -->
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2023 Mergington High School</p>
+      <div class="footer-content">
+        <p>💙 Made with love by Mergington High School</p>
+        <p class="footer-year">&copy; 2023 Mergington High School - Empowering Students</p>
+      </div>
     </footer>
 
     <script src="app.js"></script>
